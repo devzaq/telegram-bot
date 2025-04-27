@@ -16,7 +16,7 @@ app.post("/", (req, res) => {
   axios
     .post(`https://api.telegram.org/bot${API_KEY}/sendMessage`, {
       chat_id: message.chat.id,
-      text: JSON.stringify(message),
+      text: JSON.stringify(message.text) || "hello",
     })
     .then((e) => {
       console.log(e);
