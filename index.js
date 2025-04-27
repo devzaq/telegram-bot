@@ -13,18 +13,17 @@ app.post("/", (req, res) => {
 
   if (!message || message.text.toLowerCase().indexOf("mango") < 0)
     return res.json({ status: "fail" });
-  //   axios
-  //     .post(`https://api.telegram.org/bot${API_KEY}/sendMessage`, {
-  //       chat_id: message.chat.id,
-  //       text: "Lassi🥂",
-  //       //   text: "lassi " + message.text,
-  //     })
-  //     .then((e) => {
-  //       console.log(e);
-  //     })
-  //     .catch((e) => {
-  //       console.error("error occured", e);
-  //     });
+  axios
+    .post(`https://api.telegram.org/bot${API_KEY}/sendMessage`, {
+      chat_id: message.chat.id,
+      text: "Lassi🥂",
+    })
+    .then((e) => {
+      console.log(e);
+    })
+    .catch((e) => {
+      console.error("error occured", e);
+    });
 
   res.json({
     status: "200",
