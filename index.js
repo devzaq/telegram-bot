@@ -11,12 +11,10 @@ app.use(express.urlencoded({ extended: true }));
 app.post("/", (req, res) => {
   const { message } = req.body;
 
-  if (!message || message.text.toLowerCase().indexOf("mango") < 0)
-    return res.json({ status: "fail" });
   axios
     .post(`https://api.telegram.org/bot${API_KEY}/sendMessage`, {
       chat_id: message.chat.id,
-      text: message.text || "hello",
+      text: "Lassi le lo paji🥂",
     })
     .then((e) => {
       console.log(e);
