@@ -8,7 +8,7 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-app.post("/new-message", (req, res) => {
+app.post("/", (req, res) => {
   const { message } = req.body;
 
   axios
