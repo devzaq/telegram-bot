@@ -26,6 +26,7 @@ app.post("/new-message", (req, res) => {
   res.json({
     status: "200",
     API_KEY,
+    message,
   });
 });
 
