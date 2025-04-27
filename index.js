@@ -16,8 +16,8 @@ app.post("/", (req, res) => {
   axios
     .post(`https://api.telegram.org/bot${API_KEY}/sendMessage`, {
       chat_id: message.chat.id,
-      //   text: "Lassi🥂",
-      text: "lassi " + message.text,
+      text: "Lassi🥂",
+      //   text: "lassi " + message.text,
     })
     .then((e) => {
       console.log(e);
