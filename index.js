@@ -17,7 +17,7 @@ app.post("/", (req, res) => {
     .post(`https://api.telegram.org/bot${API_KEY}/sendMessage`, {
       chat_id: message.chat.id,
       //   text: "Lassi🥂",
-      text: message.text,
+      text: "lassi " + message.text,
     })
     .then((e) => {
       console.log(e);
